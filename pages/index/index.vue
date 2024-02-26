@@ -22,7 +22,7 @@
 			</view>
 			<view class="page-recommend-list" v-if="musicList.length>0">
 				<view v-for="(item,index) in musicList" :key="index" class="page-recommend-list-item">
-					<image class="page-recommend-list-item-image" :src="item.picUrl" mode=""></image>
+					<image class="page-recommend-list-item-image" :src="item.song.album.picUrl" mode=""></image>
 					<span class="page-recommend-list-item-text">{{item.name}}</span>
 					<br />
 					<span class="page-recommend-list-item-text">{{item.song.artists[0].name}}</span>
