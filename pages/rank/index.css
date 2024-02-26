@@ -1,0 +1,56 @@
+	.rank {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.rank-conent {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.rank-conent-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.rank-conent-list-item {
+		display: flex;
+		flex-direction: row;
+		margin: 0rpx 20rpx;
+		padding: 10rpx 0;
+		border-bottom: 1rpx solid #e4e4e4;
+	}
+
+
+	.rank-conent-list-item-left {
+		width: 200rpx;
+		height: 200px;
+		max-height: 200rpx;
+	}
+
+	.rank-conent-list-item-left image {
+		height: 100%;
+		width: 100%;
+	}
+
+	.rank-conent-list-item-right {
+		display: flex;
+		flex-direction: column;
+		padding: 0 10rpx;
+	}
+
+	.rank-conent-list-item-right-song {
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 10rpx;
+	}
+
+	.rank-conent-list-item-right-song-name {
+		margin-left: 10rpx;
+		max-width: 400rpx;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}

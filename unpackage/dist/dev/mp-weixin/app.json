@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rank/rank",
+    "pages/singer/singer"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#d44439",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#d44439",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/home_sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "static/tabBar/rank.png",
+        "selectedIconPath": "static/tabBar/rank_sel.png",
+        "text": "排行"
+      },
+      {
+        "pagePath": "pages/singer/singer",
+        "iconPath": "static/tabBar/user.png",
+        "selectedIconPath": "static/tabBar/user_sel.png",
+        "text": "歌手"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

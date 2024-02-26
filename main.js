@@ -4,19 +4,20 @@ import App from './App'
 import Vue from 'vue'
 import './uni.promisify.adaptor'
 Vue.config.productionTip = false
+Vue.prototype.serverUrl = "http://127.0.0.1:3000";
 App.mpType = 'app'
 const app = new Vue({
-  ...App
+	...App
 })
 app.$mount()
 // #endif
 
 // #ifdef VUE3
-import { createSSRApp } from 'vue'
-export function createApp() {
-  const app = createSSRApp(App)
-  return {
-    app
-  }
-}
+import {
+	createApp
+} from 'vue'
+const app = createApp(App)
+// 将参数挂载到 Vue 实例的全局配置对象上
+app.config.globalProperties.serverUrl = "http://127.0.0.1:3000";
+app.mount("#app")
 // #endif
