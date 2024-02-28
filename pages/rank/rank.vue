@@ -1,8 +1,9 @@
 <template>
 	<view class="rank">
 		<view class="rank-conent">
-			<view class="rank-conent-list" v-for="item in rankList" :key="item">
-				<view class="rank-conent-list-item">
+			<view class="rank-conent-list">
+				<navigator class="rank-conent-list-item" v-for="item in rankList" :key="item"
+					:url="'/pages/rank-deatils/rank-deatils?item=' + encodeURIComponent(JSON.stringify(item))">
 					<view class="rank-conent-list-item-left">
 						<image :src="item.coverImgUrl" mode=""></image>
 					</view>
@@ -13,7 +14,7 @@
 							<span class="rank-conent-list-item-right-song-name">{{item2.name}}</span>
 						</view>
 					</view>
-				</view>
+				</navigator>
 			</view>
 		</view>
 	</view>

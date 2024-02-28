@@ -47,10 +47,15 @@
 		padding-bottom: 10rpx;
 	}
 
+	.rank-conent-list-item-right-song-index {
+		font-size: 26rpx;
+	}
+
 	.rank-conent-list-item-right-song-name {
 		margin-left: 10rpx;
 		max-width: 400rpx;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		font-size: 26rpx;
 	}

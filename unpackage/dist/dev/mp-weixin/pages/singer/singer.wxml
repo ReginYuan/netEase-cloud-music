@@ -1,1 +1,1 @@
-<view> 这是歌手页面 </view>
+<view class="singer"><view class="singer-list"><navigator wx:for="{{a}}" wx:for-item="item" wx:key="c" class="singer-list-item" url="{{item.d}}"><image src="{{item.a}}" mode="" class="singer-list-item-image"></image><label class="singer-list-item-name">{{item.b}}</label></navigator></view></view>

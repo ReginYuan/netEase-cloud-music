@@ -1,0 +1,29 @@
+.singer{
+	display: flex;
+	flex-direction: column;
+}
+
+.singer-list{
+	display: flex;
+	flex-direction: column;
+}
+
+.singer-list-item{
+	display: flex;
+	align-items: center;
+	margin: 0 10rpx;
+	padding: 10rpx 0;
+	border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.singer-list-item-image{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 6rpx;
+}
+
+.singer-list-item-name{
+	margin-left: 40rpx;
+	font-size: 26rpx;
+}
+

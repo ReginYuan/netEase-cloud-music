@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/rank/rank",
-    "pages/singer/singer"
+    "pages/singer/singer",
+    "pages/singer-deatils/singer-deatils",
+    "pages/rank-deatils/rank-deatils",
+    "pages/recommend-details/recommend-details",
+    "pages/player/player"
   ],
   "window": {
     "navigationBarTextStyle": "white",

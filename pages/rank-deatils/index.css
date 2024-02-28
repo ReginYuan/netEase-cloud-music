@@ -1,0 +1,39 @@
+.rank-deatils {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.rank-deatils-image {
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: 500rpx;
+}
+
+.rank-deatils-list {
+	/* position: absolute; */
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	margin: 500rpx 10rpx 10rpx 10rpx;
+}
+
+.rank-deatils-list-item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-bottom: 2rpx solid #ccc;
+	padding: 10rpx 0;
+}
+
+.rank-deatils-list-item-text {
+	font-size: 26rpx;
+	color: #2E3030;
+}
+
+.rank-deatils-list-item-name {
+	margin-top: 8rpx;
+	font-size: 20rpx;
+	color: #757575;
+}

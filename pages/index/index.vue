@@ -12,21 +12,23 @@
 				推荐歌单
 			</view>
 			<view class="page-recommend-list" v-if="recommendList.length>0">
-				<view v-for="(item,index) in recommendList" :key="index" class="page-recommend-list-item">
+				<navigator v-for="(item,index) in recommendList" :key="index" class="page-recommend-list-item"
+					:url="'/pages/recommend-details/recommend-details?item=' + encodeURIComponent(JSON.stringify(item))">
 					<image class="page-recommend-list-item-image" :src="item.picUrl" mode=""></image>
 					<span class="page-recommend-list-item-text">{{item.name}}</span>
-				</view>
+				</navigator>
 			</view>
 			<view class="page-recommend-text">
 				推荐歌曲
 			</view>
 			<view class="page-recommend-list" v-if="musicList.length>0">
-				<view v-for="(item,index) in musicList" :key="index" class="page-recommend-list-item">
+				<navigator v-for="(item,index) in musicList" :key="index" class="page-recommend-list-item"
+					:url="'/pages/player/player?item=' + encodeURIComponent(JSON.stringify(item))">
 					<image class="page-recommend-list-item-image" :src="item.song.album.picUrl" mode=""></image>
 					<span class="page-recommend-list-item-text">{{item.name}}</span>
 					<br />
 					<span class="page-recommend-list-item-text">{{item.song.artists[0].name}}</span>
-				</view>
+				</navigator>
 			</view>
 		</scroll-view>
 	</view>

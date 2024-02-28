@@ -3,21 +3,53 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "网易云音乐"
+				"navigationBarTitleText": "轻读音乐"
 			}
 		},
 		{
 			"path": "pages/rank/rank",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "音乐排行榜",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/singer/singer",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "歌手",
 				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/singer-deatils/singer-deatils",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/rank-deatils/rank-deatils",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/recommend-details/recommend-details",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/player/player",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
 			}
 		}
 	],
