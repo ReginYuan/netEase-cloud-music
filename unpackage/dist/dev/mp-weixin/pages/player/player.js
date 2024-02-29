@@ -42,6 +42,7 @@ const _sfc_main = {
                 this.currentTime = audio.currentTime;
                 this.duration = audio.duration;
               });
+              this.formatTime(audio.currentTime);
             } else {
               common_vendor.index.showToast({
                 title: "暂无资源",
@@ -60,6 +61,7 @@ const _sfc_main = {
   onUnload() {
     if (audio) {
       audio.stop();
+      audio.src = "";
     }
   },
   methods: {
@@ -98,7 +100,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: common_vendor.o((...args) => $options.seek && $options.seek(...args)),
     f: common_vendor.o($options.togglePlay),
     g: common_vendor.p({
-      urlString: $data.isPlaying ? "../../static/audio/pause.png" : "../../static/audio/play.png"
+      iconId: $data.isPlaying ? "icon-pause" : "icon-play"
     }),
     h: common_vendor.t($data.song),
     i: common_vendor.t($data.singer),

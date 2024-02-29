@@ -18,7 +18,7 @@
  			<slider block-size="5" activeColor="#fff" backgroundColor="#eef2f3" :max="duration" :value="currentTime"
  				@change="seek" class="player-audio-progress" />
  			<view class="player-audio-controls">
- 				<my-icon :urlString="isPlaying ? '../../static/audio/pause.png':'../../static/audio/play.png'" class="player-audio-controls-image"
+ 				<my-icon :iconId="isPlaying ? 'icon-pause':'icon-play'" class="player-audio-controls-image"
  					@my-click="togglePlay"></my-icon>
  				<view class="player-audio-controls-text">
  					<view class="player-audio-controls-text-left">
@@ -77,6 +77,7 @@
  									this.currentTime = audio.currentTime;
  									this.duration = audio.duration;
  								});
+ 								this.formatTime(audio.currentTime)
  							} else {
  								uni.showToast({
  									title: '暂无资源',
@@ -95,6 +96,7 @@
  		onUnload() {
  			if (audio) {
  				audio.stop();
+ 				audio.src = '';
  			}
  		},
  		methods: {

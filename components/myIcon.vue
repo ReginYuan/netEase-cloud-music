@@ -1,15 +1,10 @@
 <template>
-	<!-- <text class="iconfont" :class="[iconId,iconColor]" :style="{fontSize:`${iconSize}rpx`}" @tap="myClick"></text> -->
-	<image :src="urlString" class="iconfont" :style="{fontSize:`${iconSize}rpx`}" @tap="myClick"></image>
+	<view class="iconfont" :class="[iconId,iconColor]" :style="{fontSize:`${iconSize}rpx`}" @tap="myClick"></view>
 </template>
 
 <script>
 	export default {
 		props: {
-			urlString: {
-				type: String,
-				default:''
-			},
 			iconId: {
 				type: String,
 				default: ''
@@ -20,7 +15,7 @@
 			},
 			iconSize: {
 				type: [Number, String],
-				default: 45
+				default: 20
 			}
 		},
 		methods: {
@@ -46,12 +41,18 @@
 	}
 
 	.icon-pause {
-		background-image: url('~@/static/audio/pause.png');
+		width: 80rpx;
+		height: 80rpx;
+		background-image: url('../static/audio/pause.png');
 		background-size: 100%;
+		background-size: cover;
 	}
 
 	.icon-play {
-		background-image: url('~@/static/audio/play.png');
+		width: 80rpx;
+		height: 80rpx;
+		background-image: url('../static/audio/play.png');
 		background-size: 100%;
+		background-size: cover;
 	}
 </style>

@@ -1,1 +1,1 @@
-<image src="{{a}}" class="iconfont data-v-eaed518e" style="{{'font-size:' + b}}" bindtap="{{c}}"></image>
+<view class="{{['iconfont', 'data-v-eaed518e', a, b]}}" style="{{'font-size:' + c}}" bindtap="{{d}}"></view>

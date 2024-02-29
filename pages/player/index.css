@@ -91,13 +91,11 @@ uni-slider {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 20rpx;
 }
 
 .player-audio-controls-image {
-	margin-left: 10rpx;
-	padding: 20rpx;
-	width: 20rpx;
-	height: 20rpx;
+	margin: 12rpx 0rpx 0rpx 0rpx;
 }
 
 .player-audio-controls-text {
@@ -105,7 +103,7 @@ uni-slider {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 20rpx;
+	padding: 0 0 0 20rpx;
 }
 
 .player-audio-controls-text-left {
