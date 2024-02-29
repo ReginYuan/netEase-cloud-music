@@ -6,13 +6,18 @@ const _sfc_main = {
       users: {
         name: ""
       },
-      hotSongsList: []
+      hotSongsList: [],
+      name: ""
     };
   },
   onLoad(option) {
     var serverUrl = this.serverUrl || this.$config.serverUrl;
     let data = option.item ? JSON.parse(decodeURIComponent(option.item)) : null;
     let id = data ? data.id : null;
+    this.name = data.name || "未知歌手";
+    common_vendor.index.setNavigationBarTitle({
+      title: this.name
+    });
     if (id) {
       common_vendor.index.request({
         url: serverUrl + "/artists?id=" + id,
@@ -38,7 +43,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         a: common_vendor.t(item.al.name),
         b: common_vendor.t(item.ar[0].name),
         c: index,
-        d: "/pages/player/player?item=" + encodeURIComponent(JSON.stringify(item))
+        d: "/pages/player/player?item=" + encodeURIComponent(JSON.stringify(item)) + "&singer=" + encodeURIComponent(JSON.stringify(item.ar[0].name))
       };
     })
   };

@@ -3,8 +3,7 @@
 		<image :src="users.img1v1Url" mode="aspectFill" class="singer-deatils-image"></image>
 		<view class="singer-deatils-list">
 			<navigator class="singer-deatils-list-item" v-for="(item,index) in hotSongsList" :key="index"
-			:url="'/pages/player/player?item=' + encodeURIComponent(JSON.stringify(item))"
-			>
+				:url="'/pages/player/player?item=' + encodeURIComponent(JSON.stringify(item))+'&singer='+encodeURIComponent(JSON.stringify(item.ar[0].name))">
 				<span class="singer-deatils-list-item-text">{{item.al.name}}</span>
 				<span class="singer-deatils-list-item-name">{{item.ar[0].name}}</span>
 			</navigator>
@@ -19,13 +18,18 @@
 				users: {
 					name: ''
 				},
-				hotSongsList: []
+				hotSongsList: [],
+				name: ''
 			}
 		},
 		onLoad(option) {
 			var serverUrl = this.serverUrl || this.$config.serverUrl;
 			let data = option.item ? JSON.parse(decodeURIComponent(option.item)) : null;
 			let id = data ? data.id : null;
+			this.name = data.name || '未知歌手';
+			uni.setNavigationBarTitle({
+				title: this.name
+			});
 			if (id) {
 				uni.request({
 					url: serverUrl + '/artists?id=' + id,

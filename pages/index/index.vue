@@ -23,7 +23,7 @@
 			</view>
 			<view class="page-recommend-list" v-if="musicList.length>0">
 				<navigator v-for="(item,index) in musicList" :key="index" class="page-recommend-list-item"
-					:url="'/pages/player/player?item=' + encodeURIComponent(JSON.stringify(item))">
+					:url="'/pages/player/player?item=' + encodeURIComponent(JSON.stringify(item))+'&singer='+encodeURIComponent(JSON.stringify(item.song.artists[0].name))">
 					<image class="page-recommend-list-item-image" :src="item.song.album.picUrl" mode=""></image>
 					<span class="page-recommend-list-item-text">{{item.name}}</span>
 					<br />

@@ -67,7 +67,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: common_vendor.t(item.name),
         c: common_vendor.t(item.song.artists[0].name),
         d: index,
-        e: "/pages/player/player?item=" + encodeURIComponent(JSON.stringify(item))
+        e: "/pages/player/player?item=" + encodeURIComponent(JSON.stringify(item)) + "&singer=" + encodeURIComponent(JSON.stringify(item.song.artists[0].name))
       };
     })
   } : {});

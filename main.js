@@ -1,4 +1,5 @@
 import App from './App'
+import myIcon from '@/components/myIcon.vue';
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
