@@ -23,8 +23,6 @@ const _sfc_main = {
   watch: {
     "iconId": {
       handler(newVal, oldVal) {
-        console.log("新的值:" + newVal);
-        console.log("旧的值:" + oldVal);
       },
       deep: true
     }
